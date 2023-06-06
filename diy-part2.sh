@@ -12,10 +12,10 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/10.10.10.100/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.10.10.99/g' package/base-files/files/bin/config_generate
 
 # Enable r8125 ASPM
-cp -f $GITHUB_WORKSPACE/010-config.patch package/kernel/r8125/patches/010-config.patch
+# cp -f $GITHUB_WORKSPACE/010-config.patch package/kernel/r8125/patches/010-config.patch
 
 #Apply the patches
 git apply $GITHUB_WORKSPACE/patches/*.patch
@@ -31,7 +31,7 @@ wget https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/drpen
 wget https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/cstnet.txt -O feeds/luci/applications/luci-app-mwan3helper/root/etc/mwan3helper/othernet.txt
 
 # Change dnsproxy behavior
-sed -i 's/--cache --cache-min-ttl=3600/--cache --cache-min-ttl=600/g' ./feeds/luci/applications/luci-app-turboacc/root/etc/init.d/turboacc
+# sed -i 's/--cache --cache-min-ttl=3600/--cache --cache-min-ttl=600/g' ./feeds/luci/applications/luci-app-turboacc/root/etc/init.d/turboacc
 
 # Convert zh-cn to zh_Hans
 #bash <( curl -sSL https://build-scripts.immortalwrt.eu.org/convert_translation.sh )
