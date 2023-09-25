@@ -12,15 +12,15 @@
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-./scripts/feeds update -a && ./scripts/feeds install -a
+#./scripts/feeds update -a && ./scripts/feeds install -a
 
 # Add a feed source
 #sed -i '$a src-git mosdns https://github.com/Gzxhwq/openwrt-mos;dev' feeds.conf.default
-rm -rf feeds/luci/applications/luci-app-passwall
-svn export https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall feeds/luci/applications/luci-app-passwall
-rm -rf openwrt/feeds/packages/lang/golang
-svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/passwall_packages
+#rm -rf feeds/luci/applications/luci-app-passwall
+#svn export https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall feeds/luci/applications/luci-app-passwall
+#rm -rf openwrt/feeds/packages/lang/golang
+#svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
+#git clone https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/passwall_packages
 
 #Add external packages
 #svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/others/luci-app-amlogic
