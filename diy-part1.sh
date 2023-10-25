@@ -15,8 +15,6 @@
 #./scripts/feeds update -a && ./scripts/feeds install -a
 
 # Add a feed source
-sed -i '1s/^/src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main\n/' feeds.conf.default
-sed -i '1s/^/src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main\n/' feeds.conf.default
 #rm -rf feeds/luci/applications/luci-app-passwall
 #svn export https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall feeds/luci/applications/luci-app-passwall
 #rm -rf openwrt/feeds/packages/lang/golang
